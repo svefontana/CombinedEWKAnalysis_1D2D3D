@@ -1,0 +1,31 @@
+[Global]
+par1Name = dk
+par1PlotName = #lambda
+par2Name = lam
+par2PlotName = #Delta g^{Z}
+NlnN=0
+model=dkzdg1zToCW
+
+[ch1_splitted_2Dpol2]
+Nbkg=1
+bkg1_name=background
+bkg1_shape_syst=background_ch4boosted_backshape
+NSigBkg_corr_unc=0
+
+[ch2_splitted_2Dpol2]
+Nbkg=1
+bkg1_name=background
+bkg1_shape_syst=background_ch4boosted_backshape
+NSigBkg_corr_unc=0
+
+[ch3_splitted_2Dpol2]
+Nbkg=1
+bkg1_name=background
+bkg1_shape_syst=background_ch4boosted_backshape
+NSigBkg_corr_unc=0
+
+[ch4_splitted_2Dpol2]
+Nbkg=1
+bkg1_name=background
+bkg1_shape_syst=background_ch4boosted_backshape
+NSigBkg_corr_unc=0

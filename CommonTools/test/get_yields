@@ -1,0 +1,9 @@
+n_exp_final_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1->getVal()+n_exp_final_binch2_proc_WWgammaZ_WV_atgc_semileptonic_ch2->getVal()+n_exp_final_binch3_proc_WWgammaZ_WV_atgc_semileptonic_ch3->getVal()+n_exp_final_binch4_proc_WWgammaZ_WV_atgc_semileptonic_ch4->getVal()+n_exp_final_binch5_proc_WWgammaZ_WV_atgc_semileptonic_ch5->getVal()+n_exp_final_binch6_proc_WWgammaZ_WV_atgc_semileptonic_ch6->getVal()
+
+n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1->getVal()+n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1->getVal()+n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1->getVal()+n_exp_final_binch2_proc_WV_semileptonic_bkg1_ch2->getVal()+n_exp_final_binch2_proc_WV_semileptonic_bkg2_ch2->getVal()+n_exp_final_binch2_proc_WV_semileptonic_bkg3_ch2->getVal()+n_exp_final_binch3_proc_WV_semileptonic_bkg1_ch3->getVal()+n_exp_final_binch3_proc_WV_semileptonic_bkg2_ch3->getVal()+n_exp_final_binch3_proc_WV_semileptonic_bkg3_ch3->getVal()+n_exp_final_binch4_proc_WV_semileptonic_bkg1_ch4->getVal()+n_exp_final_binch4_proc_WV_semileptonic_bkg2_ch4->getVal()+n_exp_final_binch4_proc_WV_semileptonic_bkg3_ch4->getVal()+n_exp_final_binch5_proc_WV_semileptonic_bkg1_ch5->getVal()+n_exp_final_binch5_proc_WV_semileptonic_bkg3_ch5->getVal()+n_exp_final_binch6_proc_WV_semileptonic_bkg1_ch6->getVal()+n_exp_final_binch6_proc_WV_semileptonic_bkg3_ch6->getVal()
+
+========
+
+n_exp_final_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch1->Print()
+
+n_exp_final_binch1_proc_WV_semileptonic_bkg1_ch1->getVal()+n_exp_final_binch1_proc_WV_semileptonic_bkg2_ch1->getVal()+n_exp_final_binch1_proc_WV_semileptonic_bkg3_ch1->getVal()

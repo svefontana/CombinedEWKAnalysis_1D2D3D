@@ -1,0 +1,66 @@
+RooWorkspace(w) w contents
+
+variables
+---------
+(CMS_channel,W_pt_ch6,dg1,dkg,kappaH_1,kappaL_1,lZ,lumi_8TeV,lumi_8TeV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,zz2l2nu_CMS_hzz2l2v_sherpa,zz2l2nu_CMS_hzz2l2v_sherpa_In)
+
+p.d.f.s
+-------
+SimpleGaussianConstraint::lumi_8TeV_Pdf[ x=lumi_8TeV mean=lumi_8TeV_In sigma=1 ] = 1
+RooSimultaneousOpt::model_b[ indexCat=CMS_channel ch6boosted=pdf_binch6boosted_bonly extraConstraints=() ] = 2.35137
+RooSimultaneousOpt::model_s[ indexCat=CMS_channel ch6boosted=pdf_binch6boosted extraConstraints=() ] = 2.23166
+RooProdPdf::nuisancePdf[ lumi_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_sherpa_Pdf ] = 1
+RooProdPdf::pdf_binch6boosted[ lumi_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_sherpa_Pdf * pdf_binch6boosted_nuis ] = 2.23166
+RooProdPdf::pdf_binch6boosted_bonly[ lumi_8TeV_Pdf * zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf * topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf * wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf * zz2l2nu_CMS_hzz2l2v_sherpa_Pdf * pdf_binch6boosted_bonly_nuis ] = 2.35137
+RooAddPdf::pdf_binch6boosted_bonly_nuis[ n_exp_binch6boosted_proc_WV_semileptonic_bkg1_ch6 * shapeBkg_WV_semileptonic_bkg1_ch6_ch6boostedPdf + n_exp_binch6boosted_proc_WV_semileptonic_bkg3_ch6 * shapeBkg_WV_semileptonic_bkg3_ch6_ch6boostedPdf + n_exp_binch6boosted_proc_WV_semileptonic_bkg2_ch6 * shapeBkg_WV_semileptonic_bkg2_ch6_ch6boostedPdf ] = 2.35137
+RooAddPdf::pdf_binch6boosted_nuis[ n_exp_binch6boosted_proc_WV_semileptonic_bkg1_ch6 * shapeBkg_WV_semileptonic_bkg1_ch6_ch6boostedPdf + n_exp_final_binch6boosted_proc_WWgammaZ_WV_atgc_semileptonic_ch6 * shapeSig_WWgammaZ_WV_atgc_semileptonic_ch6_ch6boosted + n_exp_binch6boosted_proc_WV_semileptonic_bkg3_ch6 * shapeBkg_WV_semileptonic_bkg3_ch6_ch6boostedPdf + n_exp_binch6boosted_proc_WV_semileptonic_bkg2_ch6 * shapeBkg_WV_semileptonic_bkg2_ch6_ch6boostedPdf ] = 2.23166
+RooHistPdf::shapeBkg_WV_semileptonic_bkg1_ch6_ch6boostedPdf[ pdfObs=(W_pt_ch6) ] = 2.49454
+RooHistPdf::shapeBkg_WV_semileptonic_bkg2_ch6_ch6boostedPdf[ pdfObs=(W_pt_ch6) ] = 1e-05
+RooHistPdf::shapeBkg_WV_semileptonic_bkg3_ch6_ch6boostedPdf[ pdfObs=(W_pt_ch6) ] = 0.163198
+RooATGCSemiAnalyticPdf_wz::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch6_ch6boosted[ observable=W_pt_ch6 lZ=lZ dkg=dkg dg1=dg1 SM_shape=WV_semileptonic_SM_ch6_shape ] = 0.153071
+SimpleGaussianConstraint::topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_Pdf[ x=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV mean=topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_Pdf[ x=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV mean=wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::zll_CMS_hzz2l2v_stat_ll_zll_8TeV_Pdf[ x=zll_CMS_hzz2l2v_stat_ll_zll_8TeV mean=zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In sigma=1 ] = 1
+SimpleGaussianConstraint::zz2l2nu_CMS_hzz2l2v_sherpa_Pdf[ x=zz2l2nu_CMS_hzz2l2v_sherpa mean=zz2l2nu_CMS_hzz2l2v_sherpa_In sigma=1 ] = 1
+
+functions
+--------
+RooATGCProcessScaling_wz::Scaling_WWgammaZ_WV_atgc_semileptonic_ch6[ lZ=lZ dkg=dkg dg1=dg1 ] = 1
+RooHistFunc::Scaling_base_pdf_WWgammaZ_WV_atgc_semileptonic_ch6[ depList=(W_pt_ch6) ] = 0.153071
+RooHistFunc::WV_semileptonic_SM_ch6_shape[ depList=(W_pt_ch6) ] = 0.153071
+ProcessNormalization::n_exp_binch6boosted_proc_WV_semileptonic_bkg1_ch6[ thetaList=() asymmThetaList=(zll_CMS_hzz2l2v_stat_ll_zll_8TeV) otherFactorList=() ] = 2.49454
+ProcessNormalization::n_exp_binch6boosted_proc_WV_semileptonic_bkg2_ch6[ thetaList=() asymmThetaList=() otherFactorList=() ] = 1e-05
+ProcessNormalization::n_exp_binch6boosted_proc_WV_semileptonic_bkg3_ch6[ thetaList=() asymmThetaList=(wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV) otherFactorList=() ] = 0.163198
+ProcessNormalization::n_exp_binch6boosted_proc_WWgammaZ_WV_atgc_semileptonic_ch6[ thetaList=(lumi_8TeV) asymmThetaList=(zz2l2nu_CMS_hzz2l2v_sherpa) otherFactorList=(Scaling_WWgammaZ_WV_atgc_semileptonic_ch6) ] = 0.153071
+RooProduct::n_exp_final_binch6boosted_proc_WWgammaZ_WV_atgc_semileptonic_ch6[ n_exp_binch6boosted_proc_WWgammaZ_WV_atgc_semileptonic_ch6 * shapeSig_WWgammaZ_WV_atgc_semileptonic_ch6_ch6boosted__norm ] = 0.153071
+AsymPow::shapeSig_WWgammaZ_WV_atgc_semileptonic_ch6_ch6boosted__norm[ kappaLow=kappaL_1 kappaHigh=kappaH_1 theta=zz2l2nu_CMS_hzz2l2v_sherpa ] = 1
+
+datasets
+--------
+RooDataHist::data_obs(CMS_channel,W_pt_ch6)
+RooDataHist::DHIST_SM_wv_semil_ch6_shape_for_scale(W_pt_ch6)
+RooDataHist::shapeBkg_WV_semileptonic_bkg1_ch6_ch6boosted(W_pt_ch6)
+RooDataHist::shapeBkg_WV_semileptonic_bkg3_ch6_ch6boosted(W_pt_ch6)
+RooDataHist::shapeBkg_WV_semileptonic_bkg2_ch6_ch6boosted(W_pt_ch6)
+
+named sets
+----------
+ModelConfig_GlobalObservables:(lumi_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zz2l2nu_CMS_hzz2l2v_sherpa_In)
+ModelConfig_NuisParams:(lumi_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zz2l2nu_CMS_hzz2l2v_sherpa)
+ModelConfig_Observables:(W_pt_ch6,CMS_channel)
+ModelConfig_POI:(dkg,dg1,lZ)
+ModelConfig_bonly_GlobalObservables:(lumi_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zz2l2nu_CMS_hzz2l2v_sherpa_In)
+ModelConfig_bonly_NuisParams:(lumi_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zz2l2nu_CMS_hzz2l2v_sherpa)
+ModelConfig_bonly_Observables:(W_pt_ch6,CMS_channel)
+ModelConfig_bonly_POI:(dkg,dg1,lZ)
+POI:(dkg,dg1,lZ)
+globalObservables:(lumi_8TeV_In,zll_CMS_hzz2l2v_stat_ll_zll_8TeV_In,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV_In,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV_In,zz2l2nu_CMS_hzz2l2v_sherpa_In)
+nuisances:(lumi_8TeV,zll_CMS_hzz2l2v_stat_ll_zll_8TeV,topwwwjetsdata_CMS_hzz2l2v_stat_ll_topwwwjetsdata_8TeV,wz3lnu_CMS_hzz2l2v_stat_ll_wz3lnu_8TeV,zz2l2nu_CMS_hzz2l2v_sherpa)
+observables:(W_pt_ch6,CMS_channel)
+
+generic objects
+---------------
+TH1D::SM_wv_semil_ch6_shape_for_scale
+RooStats::ModelConfig::ModelConfig
+RooStats::ModelConfig::ModelConfig_bonly
+RooArgSet::discreteParams

@@ -1,0 +1,4 @@
+gSystem->Load("libHiggsAnalysisCombinedLimit")     
+w->cd()
+n_exp_final_binch1_proc_WWgammaZ_WV_atgc_semileptonic_ch7->getVal()
+CMS_channel->setIndex(1)
