@@ -6,28 +6,23 @@ par1High = 0.03
 par2Name = dk
 par2Low = -0.3
 par2High = 0.3
-NlnN=0
 
 [ch1_splitted_TF2]
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0
 
 [ch2_splitted_TF2]
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0
 
 [ch3_splitted_TF2]
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0
 
 [ch4_splitted_TF2]
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0

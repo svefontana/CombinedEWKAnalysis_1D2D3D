@@ -140,6 +140,8 @@ elif Ndim == 3:
 else:
     print 'Only dimensions 1, 2 and 3 implemented... this thing will crash.'
 
+NSigBkg_corr_unc_int=0
+
 basepath = '%s/src/CombinedEWKAnalysis/CommonTools/data/anomalousCoupling'%os.environ['CMSSW_BASE']
 
 

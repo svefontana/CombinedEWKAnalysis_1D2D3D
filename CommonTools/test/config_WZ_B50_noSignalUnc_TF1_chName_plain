@@ -1,5 +1,4 @@
 [Global]
-NlnN=0
 model=par1_TF1
 par1Low = -0.03
 par1High = 0.03
@@ -8,22 +7,18 @@ par1High = 0.03
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0
 
 [ch2_splitted_TF1]
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0
 
 [ch3_splitted_TF1]
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0
 
 [ch4_splitted_TF1]
 Nbkg=1
 bkg1_name=background
 bkg1_shape_syst=background_ch4boosted_backshape
-NSigBkg_corr_unc=0
