@@ -479,7 +479,7 @@ for section in fit_sections:
             
 
             if (Ndim==1):
-                aTGCPdf_down[i] = RooACSemiAnalyticPdf_3D('ATGCPdf_anoCoupl_process_%s_%sDown'%(codename,name_forCorr),
+                aTGCPdf_down[i] = RooACSemiAnalyticPdf_1D('ATGCPdf_anoCoupl_process_%s_%sDown'%(codename,name_forCorr),
                                                           'ATGCPdf_proc_%s'%codename,
                                                           wpt,
                                                           par1,
