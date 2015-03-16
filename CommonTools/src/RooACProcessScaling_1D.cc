@@ -79,7 +79,7 @@ RooACProcessScaling_1D(const RooACProcessScaling_1D& other,
 } 
 
 void RooACProcessScaling_1D::initializeProfiles() {
-  int const N_bins=20;
+  int const N_bins=100;
 
   P_par1_histo = new TH1D*[N_bins]();
   P_par1_TF = new TF1*[N_bins]();
@@ -194,7 +194,7 @@ void RooACProcessScaling_1D::readProfiles(RooACProcessScaling_1D const& other) {
 }
 
 RooACProcessScaling_1D::~RooACProcessScaling_1D() {
-  int N_bins=20;
+  int N_bins=100;
 
   for(int i = 0; i<N_bins; ++i) {
     if (P_par1_histo[i])

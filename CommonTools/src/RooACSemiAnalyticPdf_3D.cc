@@ -97,7 +97,7 @@ RooACSemiAnalyticPdf_3D::RooACSemiAnalyticPdf_3D(const RooACSemiAnalyticPdf_3D& 
 } 
 
 void RooACSemiAnalyticPdf_3D::initializeProfiles() {
-  int const N_bins=20;
+  int const N_bins=100;
   
   P_par1par2par3_histo = new TH3D*[N_bins]();
   P_par1par2par3_TF = new TF3*[N_bins]();
@@ -223,7 +223,7 @@ void RooACSemiAnalyticPdf_3D::readProfiles(RooACSemiAnalyticPdf_3D const& other)
 }
 
 RooACSemiAnalyticPdf_3D::~RooACSemiAnalyticPdf_3D() {
-  int const N_bins=20;
+  int const N_bins=100;
 
   for(int i = 0; i<N_bins; ++i) {
     if (P_par1par2par3_histo[i])

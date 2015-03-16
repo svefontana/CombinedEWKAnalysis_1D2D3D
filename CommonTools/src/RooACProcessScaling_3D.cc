@@ -86,7 +86,7 @@ RooACProcessScaling_3D(const RooACProcessScaling_3D& other,
 } 
 
 void RooACProcessScaling_3D::initializeProfiles() {
-  int const N_bins=20;
+  int const N_bins=100;
 
   P_par1par2par3_histo = new TH3D*[N_bins]();
   P_par1par2par3_TF = new TF3*[N_bins]();
@@ -200,7 +200,7 @@ void RooACProcessScaling_3D::readProfiles(RooACProcessScaling_3D const& other) {
 }
 
 RooACProcessScaling_3D::~RooACProcessScaling_3D() {
-  int N_bins=20;
+  int N_bins=100;
 
   for(int i = 0; i<N_bins; ++i) {
     if (P_par1par2par3_histo[i])
