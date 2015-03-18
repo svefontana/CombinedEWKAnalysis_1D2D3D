@@ -1,0 +1,36 @@
+[Global]
+obsVar = PtZ
+obsBins = 0.,50.,100.,150.,200.,250.,300.,350.,400.
+signal_weight_var=weight
+nGridPar1Bins = 7
+nGridPar2Bins = 7
+par1GridMax =  0.45
+par1GridMin = -0.45
+par2GridMax =  0.03
+par2GridMin = -0.03
+function=[0] + [1]*x + [2]*y + [3]*x*y + [4]*x*x + [5]*y*y
+model=par1par2_TF2
+outputgridpoints=11
+par1Name = dk_grid
+par2Name = lam_grid
+
+[ch_3mu_2011AB]
+obsVar = PtZ
+obsBins = 0.,50.,100.,150.,200.,250.,300.,350.,400.
+signal_model = WZ_2012_8TeV_merged_00dk_3mu_11by11.root:wz
+
+[ch_2mu_2011AB]
+obsVar = PtZ
+obsBins = 0.,50.,100.,150.,200.,250.,300.,350.,400.
+signal_model = WZ_2012_8TeV_merged_00dk_2mu_11by11.root:wz
+
+[ch_3e_2011AB]
+obsVar = PtZ
+obsBins = 0.,50.,100.,150.,200.,250.,300.,350.,400.
+signal_model = WZ_2012_8TeV_merged_00dk_3e_11by11.root:wz
+
+[ch_2e_2011AB]
+obsVar = PtZ
+obsBins = 0.,50.,100.,150.,200.,250.,300.,350.,400.
+signal_model = WZ_2012_8TeV_merged_00dk_2e_11by11.root:wz
+
