@@ -1,22 +1,33 @@
 [Global]
+# name of observable branch in input TTree
 obsVar = PtZ
+# bins of observable you want to use for the fit
 obsBins = 0.,50.,100.,150.,200.,250.,300.,350.,400.
+# name of weight branch in input TTree
 signal_weight_var=weight
+# number of generated grid points in input TTree
 nGridPar1Bins = 7
 nGridPar2Bins = 7
+# min and max values of generated grid points in input TTree
 par1GridMax =  0.45
 par1GridMin = -0.45
 par2GridMax =  0.03
 par2GridMin = -0.03
+# function you want to fit on yield in every observable bin
 function=[0] + [1]*x + [2]*y + [3]*x*y + [4]*x*x + [5]*y*y
+# model you want to use
 model=par1par2_TF2
+# if you use "TH" model then define the number of points in each axis in output TH object
 outputgridpoints=11
+# name of parameter branches in input TTree
 par1Name = dk_grid
 par2Name = lam_grid
 
+# channels
 [ch_3mu_2011AB]
 obsVar = PtZ
 obsBins = 0.,50.,100.,150.,200.,250.,300.,350.,400.
+# input root file and TTree name
 signal_model = WZ_2012_8TeV_merged_00dk_3mu_11by11.root:wz
 
 [ch_2mu_2011AB]
