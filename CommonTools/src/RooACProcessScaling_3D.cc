@@ -247,6 +247,7 @@ Double_t RooACProcessScaling_3D::evaluate() const
       v3 = P_histo[0]->GetZaxis()->GetXmax();
     break;
   case par1par2par3_TF3:
+/*
     if (v1 < P_TF[0]->GetXmin())
       v1 = P_TF[0]->GetXmin();
     if (v1 > P_TF[0]->GetXmax())
@@ -259,6 +260,7 @@ Double_t RooACProcessScaling_3D::evaluate() const
       v3 = P_TF[0]->GetZmin();
     if (v3 > P_TF[0]->GetZmax())
       v3 = P_TF[0]->GetZmax();
+*/
     break;
   case notype:
     assert(NULL && "invalid limit type!");

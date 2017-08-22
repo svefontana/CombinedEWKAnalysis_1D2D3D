@@ -250,6 +250,7 @@ Double_t RooACProcessScaling_2D::evaluate() const
       v2 = P_histo[0]->GetYaxis()->GetXmax();
     break;
   case par1par2_TF2:
+/*
     if (v1 < P_TF[0]->GetXmin())
       v1 = P_TF[0]->GetXmin();
     if (v1 > P_TF[0]->GetXmax())
@@ -258,6 +259,7 @@ Double_t RooACProcessScaling_2D::evaluate() const
       v2 = P_TF[0]->GetYmin();
     if (v2 > P_TF[0]->GetYmax())
       v2 = P_TF[0]->GetYmax();
+*/
     break;
   case notype:
     assert(NULL && "invalid limit type!");
