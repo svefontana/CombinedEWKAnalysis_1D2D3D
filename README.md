@@ -10,7 +10,7 @@ git clone  --branch v5.0.2 https://github.com/cms-analysis/HiggsAnalysis-Combine
 
 mkdir CombinedEWKAnalysis
 
-git clone https://github.com/senka/CombinedEWKAnalysis_1D2D3D CombinedEWKAnalysis
+git clone https://github.com/svefontana/CombinedEWKAnalysis_1D2D3D CombinedEWKAnalysis
 
 source CombinedEWKAnalysis/CommonTools/setup/patchToSource.sh
 
