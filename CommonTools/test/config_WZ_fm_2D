@@ -1,0 +1,249 @@
+[Global]
+# name of observable branch in input TTree
+obsVar = WZ_mass
+# bins of observable you want to use for the fit
+obsBins = 100,337.5,575,812.5,1050,1287.5,1525,1762.5,2000
+# name of weight branch in input TTree
+signal_weight_var=weight
+# number of generated grid points in input TTree
+nGridPar1Bins = 6
+nGridPar2Bins = 7
+# min and max values of generated grid points in input TTree
+par1GridMax =  16
+par1GridMin = -16
+par2GridMax =  16
+par2GridMin = -16
+# function you want to fit on yield in every observable bin
+function=[0]+[1]*x+[2]*y+[3]*x*x+[4]*y*y+[5]*x*y
+# model you want to use
+model=par1par2_TF2
+# if you use "TH" model then define the number of points in each axis in output TH object
+outputgridpoints=8
+# name of parameter branches in input TTree
+par1Name = fm0_grid
+par2Name = fm1_grid
+###
+# non-uniform binning? 1 or 0, if yes specify bin edges
+nonuniBins = 1
+par1Bins = -16,-12,-6,-2,2,6,10
+par2Bins = -16,-12,-6,-2,2,6,12,16
+# names of additional parameters that are neglected (i.e. should be zero)
+morepars = 
+
+# channels
+[eee_bin1]
+obsVar = WZ_mass
+obsBins = 100,337.5
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+
+[eee_bin2]
+obsVar = WZ_mass
+obsBins = 337.5,575
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+
+[eee_bin3]
+obsVar = WZ_mass
+obsBins = 575,812.5
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+
+[eee_bin4]
+obsVar = WZ_mass
+obsBins = 812.5,1050
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+
+[eee_bin5]
+obsVar = WZ_mass
+obsBins = 1050,1287.5
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+
+[eee_bin6]
+obsVar = WZ_mass
+obsBins = 1287.5,1525
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+[eee_bin7]
+obsVar = WZ_mass
+obsBins = 1525,1762.5
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+[eee_bin8]
+obsVar = WZ_mass
+obsBins = 1762.5,2000
+# input root file and TTree name
+signal_model = ch_eee_fm.root:tree
+
+
+# channels
+[eem_bin1]
+obsVar = WZ_mass
+obsBins = 100,337.5
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+
+[eem_bin2]
+obsVar = WZ_mass
+obsBins = 337.5,575
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+
+[eem_bin3]
+obsVar = WZ_mass
+obsBins = 575,812.5
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+
+[eem_bin4]
+obsVar = WZ_mass
+obsBins = 812.5,1050
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+
+[eem_bin5]
+obsVar = WZ_mass
+obsBins = 1050,1287.5
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+
+[eem_bin6]
+obsVar = WZ_mass
+obsBins = 1287.5,1525
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+[eem_bin7]
+obsVar = WZ_mass
+obsBins = 1525,1762.5
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+[eem_bin8]
+obsVar = WZ_mass
+obsBins = 1762.5,2000
+# input root file and TTree name
+signal_model = ch_eem_fm.root:tree
+
+# channels
+[mme_bin1]
+obsVar = WZ_mass
+obsBins = 100,337.5
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+
+[mme_bin2]
+obsVar = WZ_mass
+obsBins = 337.5,575
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+
+[mme_bin3]
+obsVar = WZ_mass
+obsBins = 575,812.5
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+
+[mme_bin4]
+obsVar = WZ_mass
+obsBins = 812.5,1050
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+
+[mme_bin5]
+obsVar = WZ_mass
+obsBins = 1050,1287.5
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+
+[mme_bin6]
+obsVar = WZ_mass
+obsBins = 1287.5,1525
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+[mme_bin7]
+obsVar = WZ_mass
+obsBins = 1525,1762.5
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+[mme_bin8]
+obsVar = WZ_mass
+obsBins = 1762.5,2000
+# input root file and TTree name
+signal_model = ch_mme_fm.root:tree
+
+
+# channels
+[mmm_bin1]
+obsVar = WZ_mass
+obsBins = 100,337.5
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
+
+
+[mmm_bin2]
+obsVar = WZ_mass
+obsBins = 337.5,575
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
+
+
+[mmm_bin3]
+obsVar = WZ_mass
+obsBins = 575,812.5
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
+
+
+[mmm_bin4]
+obsVar = WZ_mass
+obsBins = 812.5,1050
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
+
+
+[mmm_bin5]
+obsVar = WZ_mass
+obsBins = 1050,1287.5
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
+
+
+[mmm_bin6]
+obsVar = WZ_mass
+obsBins = 1287.5,1525
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
+
+[mmm_bin7]
+obsVar = WZ_mass
+obsBins = 1525,1762.5
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
+
+[mmm_bin8]
+obsVar = WZ_mass
+obsBins = 1762.5,2000
+# input root file and TTree name
+signal_model = ch_mmm_fm.root:tree
