@@ -178,7 +178,7 @@ for section in fit_sections:
     bins = [float(i) for i in cfg.get(section,'obsBins').split(',')]
     
     		
-    outfile_newF = TFile.Open('/home/sfontana/CMSSW_7_1_5/src/CombinedEWKAnalysis/CommonTools/data/anomalousCoupling/signal_proc_'+section+'.root','RECREATE')
+    outfile_newF = TFile.Open('../data/anomalousCoupling/signal_proc_'+section+'.root','RECREATE')
 
     for i in range(1,len(bins)):
         
