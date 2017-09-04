@@ -1,3 +1,6 @@
+Setting up the environment
+---------------------------
+
 `setenv SCRAM_ARCH slc6_amd64_gcc481`  
 `cmsrel CMSSW_7_1_5`  
 `cd CMSSW_7_1_5/src`  
