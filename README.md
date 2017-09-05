@@ -19,11 +19,12 @@ Change path to data file at the beginning of test_fs.py
 `python test_fs.py`  creates the signal input files ch_eee_fs, ch_eem_fs,ch_mme_fs,ch_mmm_fs which are needed as input for doFit_nonuniformbins_bin_separated.py  
 `python doFit_nonuniformbins_bin_separated.py --config=config_WZ_fs`     
 `python buildWorkspace_AC.py --config=config_WZ_fs_bkg` Needs the input files with data and background histograms and the corresponding uncertainties. Example input files are in CombinedEWKAnalysis/CommonTools/data/anomalousCoupling  eee_bin1.root - mmm_bin8.root.   
-They are made with:    
-`python data_bkg_histos_bin_separated.py`    
-`python correct_uncertaintybands.py`   
-`python pdfweight_variation_bin_separated.py`    
- `python scale_variation_bin_separated.py`    
+They are made with:
+*python data_bkg_histos_bin_separated.py*     
+*python correct_uncertaintybands.py*     
+*python pdfweight_variation_bin_separated.py*      
+*python scale_variation_bin_separated.py*  
+
 This code needs the output of the DevTools framework as input.   
 
 `combineCards.py aC_eee_bin*.txt aC_eem_bin*.txt aC_mme_bin*.txt aC_mmm_bin*.txt > aC_WZ_all_fs.txt`  
