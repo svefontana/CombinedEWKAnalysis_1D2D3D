@@ -234,17 +234,15 @@ def make_tree(channel):
               fs0_grid[0] = fs0list[i] #fill aQGC grid points in the outputtree
               fs1_grid[0] = fs1list[i]
 	      tree.Fill()
-	      full_diboson.Fill(wz.M(),weights[446].wgt/weights[0].wgt * lumi * xsec / sumw )#fill signal histogram 
+	  full_diboson.Fill(wz.M(),weights[446].wgt/weights[0].wgt * lumi * xsec / sumw )#fill signal histogram 
 	    
-	      histnr = 0
-	      for scalenr in [1,2,3,4,6,8]:
+	  histnr = 0
+	  for scalenr in [1,2,3,4,6,8]:
 		hists[histnr].Fill(wz.M(),weights[scalenr].wgt/weights[0].wgt * weights[446].wgt/weights[0].wgt *lumi*xsec/sumw) #fill varied signal histograms
                 histnr = histnr + 1
-          else: #if not exactly one  W boson and one Z boson is found
-            continue	      
-	
-	else: #if not exactly one  W boson and one Z boson is found
-	  continue
+        else: #if not exactly one  W boson and one Z boson is found
+            continue
+
       
 #end of event loop---------------------------------------------------------------------------------------------------------
 
