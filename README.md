@@ -28,9 +28,15 @@ They are made with (This code needs the output of the DevTools framework as inpu
 *python scale_variation_bin_separated.py*  
 
 `combineCards.py aC_eee_bin*.txt aC_eem_bin*.txt aC_mme_bin*.txt aC_mmm_bin*.txt > aC_WZ_all_fs.txt`  
-`text2workspace.py -m 126 aC_WZ_all_fs.txt -o Example_WZ_fs.root -P CombinedEWKAnalysis.CommonTools.ACModel:par1_TF1_Model --PO channels=eee_bin1,eee_bin2,eee_bin3,eee_bin4,eee_bin5,eee_bin6,eee_bin7,eee_bin8,eem_bin1,eem_bin2,eem_bin3,eem_bin4,eem_bin5,eem_bin6,eem_bin7,eem_bin8,mme_bin1,mme_bin2,mme_bin3,mme_bin4,mme_bin5,mme_bin6,mme_bin7,mme_bin8,mmm_bin1,mmm_bin2,mmm_bin3,mmm_bin4,mmm_bin5,mmm_bin6,mmm_bin7,mmm_bin8 --PO poi=fs1 --PO range_fs1=-40,40` (-40 to 40 to extrapolate the curve)   
-`combine Example_WZ_fs.root -M MultiDimFit -P fs1 --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 -n 1Par_fs1_obs`  
-`combine Example_WZ_fs.root -M MultiDimFit -P fs1 --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 -n 1Par_fs1_exp    --expectSignal=1 -t -1`  
+```
+text2workspace.py -m 126 aC_WZ_all_fs.txt -o Example_WZ_fs.root -P CombinedEWKAnalysis.CommonTools.ACModel:par1_TF1_Model --PO channels=eee_bin1,eee_bin2,eee_bin3,eee_bin4,eee_bin5,eee_bin6,eee_bin7,eee_bin8,eem_bin1,eem_bin2,eem_bin3,eem_bin4,eem_bin5,eem_bin6,eem_bin7,eem_bin8,mme_bin1,mme_bin2,mme_bin3,mme_bin4,mme_bin5,mme_bin6,mme_bin7,mme_bin8,mmm_bin1,mmm_bin2,mmm_bin3,mmm_bin4,mmm_bin5,mmm_bin6,mmm_bin7,mmm_bin8 --PO poi=fs1 --PO range_fs1=-40,40
+``` (-40 to 40 to extrapolate the curve)   
+```
+combine Example_WZ_fs.root -M MultiDimFit -P fs1 --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 -n 1Par_fs1_obs
+```  
+```
+combine Example_WZ_fs.root -M MultiDimFit -P fs1 --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 -n 1Par_fs1_exp    --expectSignal=1 -t -1
+```  
 `python plot1d_limit.py --POI=fs1`  
 
 To calculate 1D limits for fs0:  
@@ -97,6 +103,7 @@ root -l atgcplotLimit_bestfit.C+
 
 To calculate 2D limits for fm:    
 -----------------------------  
+Change fs to fm in atgcplotLimit_bestfit.C
 ```
 python test_fm_bin_separated.py  
 python doFit_nonuniformbins_bin_separated.py --config=config_WZ_fm_2D  
@@ -109,19 +116,3 @@ combine Example_WZ_fm.root -M MultiDimFit -P fm0 -P fm1 --floatOtherPOIs=0 --alg
 mv higgsCombine_fm_2D.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_expected.root 
 root -l atgcplotLimit_bestfit.C+  
 ```
-
-To calculate 2D limits for ft:     
------------------------------  
-```
-python test_ft.py 
-python doFit_nonuniformbins_bin_separated.py --config=config_WZ_ft_2D  
-python buildWorkspace_AC.py --config=config_WZ_ft_bkg_2D   
-combineCards.py aC_eee_bin*.txt aC_eem_bin*.txt aC_mme_bin*.txt aC_mmm_bin*.txt > aC_WZ_all_ft.txt  
-text2workspace.py -m 126 aC_WZ_all_ft.txt -o Example_WZ_ft.root -P CombinedEWKAnalysis.CommonTools.ACModel:par1par2_TF2_Model --PO channels=eee_bin1,eee_bin2,eee_bin3,eee_bin4,eee_bin5,eee_bin6,eee_bin7,eee_bin8,eem_bin1,eem_bin2,eem_bin3,eem_bin4,eem_bin5,eem_bin6,eem_bin7,eem_bin8,mme_bin1,mme_bin2,mme_bin3,mme_bin4,mme_bin5,mme_bin6,mme_bin7,mme_bin8,mmm_bin1,mmm_bin2,mmm_bin3,mmm_bin4,mmm_bin5,mmm_bin6,mmm_bin7,mmm_bin8 --PO poi=ft0,ft1 --PO range_ft0=-2,2 --PO range_ft1=-2,2  
-combine Example_WZ_ft.root -M MultiDimFit -P ft0 -P ft1 --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 -n _ft_2D 
-mv higgsCombine_ft_2D.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_measured.root  
-combine Example_WZ_ft.root -M MultiDimFit -P ft0 -P ft1 --floatOtherPOIs=0 --algo=grid --points=1001 --minimizerStrategy=2 -n _ft_2D --expectSignal=1 -t -1  
-mv higgsCombine_ft_2D.MultiDimFit.mH120.root higgsCombineTest.MultiDimFit.mH120_expected.root  
-root -l atgcplotLimit_bestfit.C+
-```
-
